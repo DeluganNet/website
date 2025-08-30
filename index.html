@@ -30,7 +30,7 @@
                 <a href="#video">Video</a>
                 <a href="#contatti">Contatti</a>
             </nav>
-            <a class="btn btn--primary" href="mailto:info@delugan.net?subject=Richiesta%20informazioni%20-%20Sito">Prenota una Call</a>
+            <a class="btn btn--primary mailto-modal-trigger" href="mailto:info@delugan.net?subject=Richiesta%20prenotazione%call">Prenota una Call</a>
         </div>
     </header>
 
@@ -42,7 +42,7 @@
                 <h1 class="hero__title">Impara e costruisci con <span class="text-gradient">IA & Automazioni</span></h1>
                 <p class="hero__subtitle">Porto nelle scuole e negli enti una tecnologia spiegata semplice, con corsi pratici e consulenze che eliminano il lavoro ripetitivo.</p>
                 <div class="hero__cta">
-                    <a class="btn btn--primary" href="mailto:info@delugan.net?subject=Prenota%20una%20call">Parliamone</a>
+                    <a class="btn btn--primary mailto-modal-trigger" href="mailto:info@delugan.net?subject=Prenota%20una%20call">Parliamone</a>
                     <a class="btn btn--ghost" href="#corsi">Scopri i servizi</a>
                 </div>
                 <div class="hero__meta">
@@ -52,18 +52,18 @@
                 </div>
             </div>
             <div class="hero__visual">
-                <div class="floating-card reveal hover-tilt" style="--i:1">
+                <a class="floating-card reveal hover-tilt" href="#corsi" aria-label="Vai alla sezione Corsi" style="--i:1">
                     <div class="icon">💡</div>
-                    <div class="txt">Laboratori creativi STEM</div>
-                </div>
-                <div class="floating-card reveal hover-tilt" style="--i:2">
+                    <div class="txt">Laboratori STEM</div>
+                </a>
+                <a class="floating-card reveal hover-tilt" href="#automazione" aria-label="Vai alla sezione Automazioni" style="--i:2">
                     <div class="icon">⚙️</div>
                     <div class="txt">Automazioni con n8n</div>
-                </div>
-                <div class="floating-card reveal hover-tilt" style="--i:3">
+                </a>
+                <a class="floating-card reveal hover-tilt" href="#video" aria-label="Vai alla sezione Video" style="--i:3">
                     <div class="icon">🎥</div>
                     <div class="txt">Produzione video & live</div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="hero__bottom-fade" aria-hidden="true"></div>
@@ -74,7 +74,7 @@
             <div class="container">
                 <div class="section__head">
                     <h2>Corsi STEM per scuole e centri giovanili</h2>
-                    <p>Laboratori innovativi che uniscono creatività e tecnologia.</p>
+                    <p>Laboratori innovativi che uniscono didattica e tecnologia.</p>
                 </div>
                 <div class="grid cards reveal">
                     <article class="card hover-tilt">
@@ -99,22 +99,22 @@
                     <h2>Automazioni e Integrazioni</h2>
                     <p>Riduci i compiti ripetitivi e velocizza i flussi con soluzioni su misura.</p>
                 </div>
-                <div class="grid features reveal">
-                    <div class="feature">
+                <div class="grid cards reveal">
+                    <div class="card hover-tilt">
                         
                         <div>
                             <h3>Google Fogli avanzato</h3>
                             <p>Script personalizzati per reportistica, pulizia dati e workflow.</p>
                         </div>
                     </div>
-                    <div class="feature">
+                    <div class="card hover-tilt">
                         
                         <div>
                             <h3>n8n & No‑Code</h3>
                             <p>Collego i tuoi strumenti per farli lavorare insieme.</p>
                         </div>
                     </div>
-                    <div class="feature">
+                    <div class="card hover-tilt">
                         
                         <div>
                             <h3>Utilizzo dell'AI</h3>
@@ -152,7 +152,7 @@
             <div class="container cta__inner">
                 <h3>Hai un progetto in mente?</h3>
                 <p>Scrivimi e costruiamo un piano pratico e sostenibile.</p>
-                <a class="btn btn--primary" href="mailto:info@delugan.net?subject=Informazioni">Contattami</a>
+                <a class="btn btn--primary mailto-modal-trigger" href="mailto:info@delugan.net?subject=Richiesta%20prenotazione%call">Contattami</a>
             </div>
         </section>
     </main>
@@ -176,6 +176,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal avviso per prenotazioni via email (desktop) -->
+    <div class="modal hidden" id="mailto-modal" role="dialog" aria-modal="true" aria-labelledby="mailto-title" aria-hidden="true">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__panel">
+            <button class="modal__close" type="button" aria-label="Chiudi" data-close-modal>×</button>
+            <h3 id="mailto-title">Scrivimi via email</h3>
+            <p class="muted" id="mailto-desc">Se il programma email non si apre automaticamente, copia l'indirizzo o usa Gmail/Outlook web.</p>
+            <div class="modal__address">
+                <code id="mailto-address">info@delugan.net</code>
+                <button class="btn btn--ghost" id="mailto-copy" type="button">Copia</button>
+            </div>
+            <div class="modal__actions">
+                <a class="btn btn--primary" id="mailto-gmail" target="_blank" rel="noopener">Apri in Gmail</a>
+                <a class="btn btn--primary" id="mailto-outlook" target="_blank" rel="noopener">Apri in Outlook</a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
