@@ -124,6 +124,9 @@ header.scrolled { background: rgba(10,14,24,0.6); border-bottom: 1px solid var(-
   .nav__links { display: none; }
   .cards, .features { grid-template-columns: 1fr; }
   .hero { padding-top: 96px; }
+  .footer__grid { grid-template-columns: 1fr; gap: 24px; justify-items: start; align-items: start; }
+  .footer__links { display: flex; flex-wrap: wrap; gap: 12px; justify-self: start; }
+  .footer__links a { margin-left: 0; }
 }
 
 /* ——— Modal ——— */
